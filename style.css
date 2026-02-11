@@ -47,7 +47,18 @@ h2 {
 }
 
 section {
-  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 25px;
+}
+
+#about ul {
+  margin-top: 20px;
+}
+
+#about li {
+  margin-bottom: 12px;
+  color: #cbd5e1;
 }
 
 h2 {
@@ -56,10 +67,30 @@ h2 {
   color: #38bdf8;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 #skills ul {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#skills li {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+#skills li:hover {
+  background: #0ea5e9;
+  color: #0f172a;
+  transform: translateY(-5px);
 }
 
 .project-card, .course-card {
@@ -108,24 +139,24 @@ a:hover {
   }
 }
 .navbar {
-  display: flex;               /* Links بجانب بعضهم */
-  justify-content: center;     /* في الوسط */
-  gap: 20px;                   /* المسافة بين كل Link */
-  padding: 15px;
-  background: #1e293b;         /* لون Navbar */
-  position: sticky;            /* يبقى فوق حتى كتسكرول */
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+  background: rgba(15,23,42,0.9);
+  backdrop-filter: blur(10px);
+  position: sticky;
   top: 0;
-  z-index: 100;                /* فوق أي عنصر آخر */
 }
 
 .navbar a {
-  color: #ffffff;              /* لون Links */
-  font-weight: bold;
-  transition: color 0.3s;      /* تغيير اللون بسلاسة عند Hover */
+  color: #94a3b8;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .navbar a:hover {
-  color: #38bdf8;              /* لون عند Hover */
+  color: #38bdf8;
 }
 .profile-img {
   width: 150px;
@@ -134,4 +165,18 @@ a:hover {
   object-fit: cover;       /* باش متتشوهش */
   margin-bottom: 20px;
   border: 3px solid #38bdf8;
+}
+section {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding-bottom: 60px;
+}
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
