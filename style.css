@@ -1,0 +1,104 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0f172a;
+  color: #ffffff;
+  line-height: 1.6;
+  text-align: center;
+}
+
+header.hero {
+  padding: 50px 20px;
+  background: #1e293b;
+}
+
+header.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+  max-width: 700px;
+  margin: auto;
+}
+
+.project-card, .course-card {
+  background: #334155;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 700px;
+  text-align: left;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  header.hero h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-card, .course-card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  ul {
+    font-size: 0.9rem;
+  }
+}
+.navbar {
+  display: flex;               /* Links بجانب بعضهم */
+  justify-content: center;     /* في الوسط */
+  gap: 20px;                   /* المسافة بين كل Link */
+  padding: 15px;
+  background: #1e293b;         /* لون Navbar */
+  position: sticky;            /* يبقى فوق حتى كتسكرول */
+  top: 0;
+  z-index: 100;                /* فوق أي عنصر آخر */
+}
+
+.navbar a {
+  color: #ffffff;              /* لون Links */
+  font-weight: bold;
+  transition: color 0.3s;      /* تغيير اللون بسلاسة عند Hover */
+}
+
+.navbar a:hover {
+  color: #38bdf8;              /* لون عند Hover */
+}
